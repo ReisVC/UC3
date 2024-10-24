@@ -16,4 +16,4 @@ São três níveis, o nível conceitual, nível lógico e nível físico.
 
 6. Liste as vantagens de usar um banco de dados.
 Banco de dados é extremamente eficiente quando se trata de um grande número de envio de dados, feito especificamente para lidar com essa onda processual e facilitar grandes sistemas no gerenciamento de dados,
-como dados de clientes, produtos, dados empresariais, etc.
+como dados de clientes, produtos, dados empresariais, etc.d
