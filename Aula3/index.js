@@ -25,7 +25,7 @@ function jogar() {
 
         
         const jogadaDoUserColuna = rl.questionInt("Digite a coluna: ")
-        const jogadaDoUserLinha = rl.questionInt("DIgite a linha: ")
+        const jogadaDoUserLinha = rl.questionInt("DIgite a linha: ")    
 
         if(jogoDaVelha[jogadaDoUserColuna][jogadaDoUserLinha] !== 'o') {
             jogoDaVelha[jogadaDoUserColuna][jogadaDoUserLinha] = 'x'
