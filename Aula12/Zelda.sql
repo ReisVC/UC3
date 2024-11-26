@@ -65,17 +65,17 @@ ALTER TABLE Hyllian ADD CONSTRAINT FK_Hyllian_2
 ALTER TABLE Relacao ADD CONSTRAINT FK_Relacao_1
     FOREIGN KEY (fk_Personagem_ID_Personagem)
     REFERENCES Personagem (ID_Personagem)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
  
 ALTER TABLE Relacao ADD CONSTRAINT FK_Relacao_2
     FOREIGN KEY (fk_Personagem_ID_Personagem_)
     REFERENCES Personagem (ID_Personagem)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
  
 ALTER TABLE Associado ADD CONSTRAINT FK_Associado_1
     FOREIGN KEY (fk_Local_ID_Local)
     REFERENCES Local (ID_Local)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
  
 ALTER TABLE Associado ADD CONSTRAINT FK_Associado_2
     FOREIGN KEY (fk_Personagem_ID_Personagem)
