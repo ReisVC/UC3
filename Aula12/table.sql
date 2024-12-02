@@ -76,3 +76,5 @@ VALUES (4, 'Rodrigo', 'George', '00101000101'),
 (8, 'Ronald', 'MCDonald', '00101000101'),
 (9, 'Michael', 'Myers', '00101000101'),
 (10, 'Suzane', 'Von Richsthoffen', '00101000101');
+
+DELETE FROM pedido WHERE id_pedido = 1 AND id_pedido = 3;
