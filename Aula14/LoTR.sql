@@ -6,7 +6,8 @@ CREATE TABLE personagem(
 
 CREATE TABLE item(
 	id_item SERIAL PRIMARY KEY,
-	nome_item VARCHAR(80) NOT NULL
+	nome_item VARCHAR(80) NOT NULL,
+    valor NUMERIC NOT NULL
 )
 
 CREATE TABLE cenario(
