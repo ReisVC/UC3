@@ -28,8 +28,8 @@ CREATE TABLE feitico( -- check
 )
 
 CREATE TABLE feitico_personagem(
-    fk_feitico INT FOREIGN KEY REFERENCES feitico(id_feitico),
-    fk_personagem INT FOREIGN KEY REFERENCES personagem(id_personagem)
+    fk_feitico INT REFERENCES feitico(id_feitico),
+    fk_personagem INT REFERENCES personagem(id_personagem)
 )
 
 INSERT INTO casa(id_casa, nome_casa)
@@ -101,3 +101,25 @@ VALUES(1, 1),
 (6, 6),
 (7, 10)
 
+ALTER TABLE personagem ADD COLUMN data_nasc DATE
+
+UPDATE
+  personagem
+SET
+  data_nasc = '1966-05-15'
+WHERE id_casa = 1
+
+
+SELECT nome, nome_casa FROM personagem INNER JOIN casa ON casa.id_casa = personagem.fk_casa;
+
+CREATE OR REPLACE VIEW views_personagens_grifinoria AS
+SELECT PE.nome AS nome, PE.data_nasc AS data_nascimento,
+CA.nome_casa
+FROM personagem PE
+INNER JOIN casa CA
+ON CA.id_casa = PE.fk_casa
+WHERE CA.nome_casa = 'Grifinória'
+
+SELECT * FROM views_personagens_grifinoria
+
+CREATE INDEX index_name ON personagem(nome)
